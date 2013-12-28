@@ -15,7 +15,19 @@ class Image
   end
 
   def color(x, y, color)
-    @pixels[y][x] = color
+    @pixels[y-1][x-1] = color
+  end
+
+  def vertical(x, y1, y2, color)
+    (y1..y2).each do |y|
+      @pixels[y-1][x-1] = color
+    end
+  end
+
+  def horizontal(x1, x2, y, color)
+    (x1..x2).each do |x|
+      @pixels[y-1][x-1] = color
+    end
   end
 
   def clear
