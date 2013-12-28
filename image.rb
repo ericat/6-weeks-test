@@ -30,6 +30,10 @@ class Image
     end
   end
 
+  def show
+    @pixels.flatten.join("")
+  end
+
   def clear
     @pixels.map {|rows| rows.map! {|pixel| 'O'} }
   end

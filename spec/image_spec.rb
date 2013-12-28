@@ -29,12 +29,16 @@ let(:image) { Image.new(10, 10) }
     end
   end
 
-   context "In row Y between columns X1 and X2" do
+  context "In row Y between columns X1 and X2" do
     it "should draw a horizontal segment of colour C" do
       image.horizontal(2, 5, 3, 'C')
       expect(image.pixels[2][3]).to eq('C')
     end
   end
 
-
+  it 'should show the image content' do
+    image.vertical(4, 5, 6, 'C')
+    image.horizontal(2, 5, 3, 'C')
+    expect(image.show).to eq('OOOOOOOOOOOOOOOOOOOOOCCCCOOOOOOOOOOOOOOOOOOCOOOOOOOOOCOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO')
+  end
 end
