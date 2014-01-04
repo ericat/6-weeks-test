@@ -1,3 +1,5 @@
+require_relative 'editor'
+
 class Command
 
   def parse(input)
