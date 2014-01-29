@@ -1,2 +1,8 @@
 This is Makers' Academy 6 weeks test.
 
+Feedback:
+- Well done for simplicity. Your code is concise, which is a good thing.
+- It'd make sense to put your classes into lib/ but it's not a very big deal
+- Well done for having the Command class
+- However, you'd fail to get an interview at Forward because of a simple mistake in the flood fill
+  unless you were applying for a junior position (because the rest is quite good)
