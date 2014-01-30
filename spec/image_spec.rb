@@ -49,6 +49,8 @@ end
     expect(image.show).to eq('OOOOOOOOOOOOOOOOOOOOOCCCCOOOOOOOOOOOOOOOOOOCOOOOOOOOOCOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO')
   end
 
+  # If the test were more thourough (filling with a different colour),
+  # you'd have caught and fixed the bug.
   it "should be able to flood fill the image" do
     image.horizontal(8, 10, 1, 'C')
     image.horizontal(8, 10, 5, 'C')
@@ -58,5 +60,7 @@ end
     expect(image.pixels[1][8]).to eq('C')
     expect(image.pixels[2][8]).to eq('C')
     expect(image.pixels[3][8]).to eq('C')
+    expect(image.pixels[0][0]).to eq('O')
   end
+
 end

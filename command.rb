@@ -5,7 +5,7 @@ class Command
   def parse(input)
     params = input.split(' ')
     command = params.first
-
+    # well done for creating a class to map command names to method names
     case command
     when 'I'
       @image = Image.new(params[1].to_i, params[2].to_i)
